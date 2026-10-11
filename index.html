@@ -13,6 +13,33 @@
 <meta property="og:description" content="大分県佐伯市のリフォーム会社、株式会社ホームドクター光リフォーム。浴室・キッチン・トイレ・洗面・給湯器などの水まわりから、内装、外壁・屋根、中古住宅リノベーションまでご相談ください。">
 <meta property="og:url" content="https://homedoctor-hikarireform.com/">
 <meta property="og:image" content="https://homedoctor-hikarireform.com/images/hero1.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "株式会社 ホームドクター光リフォーム",
+  "url": "https://homedoctor-hikarireform.com/",
+  "image": "https://homedoctor-hikarireform.com/images/hero1.jpg",
+  "telephone": "+81-972-28-6586",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "876-0834",
+    "addressRegion": "大分県",
+    "addressLocality": "佐伯市",
+    "streetAddress": "城南町29-23",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  }],
+  "areaServed": "大分県佐伯市",
+  "sameAs": ["https://www.instagram.com/hiroshi_urabe_/"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
@@ -145,6 +172,29 @@
   .btn-insta { background: var(--navy); }
   .btn-insta:hover { background: var(--navy-dark); }
 
+  .cases { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+  .case { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 22px 20px; display: flex; flex-direction: column; }
+  .case .tag { font-size: 12px; font-weight: 700; letter-spacing: .05em; color: var(--accent-dark); margin-bottom: 4px; }
+  .case h3 { font-size: 17px; color: var(--navy); line-height: 1.5; margin-bottom: 8px; }
+  .case p { font-size: 14px; color: var(--muted); line-height: 1.7; flex: 1; }
+  .case a { margin-top: 12px; font-size: 13px; font-weight: 700; color: var(--navy); }
+  .sub-title { text-align: center; font-size: 18px; color: var(--navy); margin-bottom: 20px; }
+
+  /* お知らせ */
+  .notice { background: var(--cream); border-bottom: 1px solid var(--line); padding: 12px 0; font-size: 15px; text-align: center; line-height: 1.6; }
+  .notice strong { color: var(--accent-dark); }
+  .notice a { font-weight: 700; color: var(--navy); white-space: nowrap; }
+
+  /* ショールーム */
+  .showroom { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .showroom > div > p { font-size: 16px; margin-bottom: 16px; }
+  .showroom-list { background: var(--white); border-radius: 12px; padding: 28px 28px 24px; border-top: 4px solid var(--accent); }
+  .showroom-list h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; }
+  .showroom-list ul { list-style: none; }
+  .showroom-list li { padding: 10px 0 10px 22px; border-bottom: 1px solid var(--line); position: relative; font-size: 15px; }
+  .showroom-list li:last-child { border-bottom: 0; }
+  .showroom-list li::before { content: ""; position: absolute; left: 4px; top: 19px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
   /* 流れ */
   .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; counter-reset: step; }
   .step { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 24px 14px; text-align: center; position: relative; }
@@ -183,6 +233,8 @@
     .services { grid-template-columns: repeat(2, 1fr); }
     .reasons { grid-template-columns: 1fr; }
     .works { grid-template-columns: repeat(2, 1fr); }
+    .cases { grid-template-columns: repeat(2, 1fr); }
+    .showroom { grid-template-columns: 1fr; gap: 24px; }
     .flow { grid-template-columns: 1fr; }
     .company { grid-template-columns: 1fr; }
   }
@@ -192,6 +244,7 @@
     .hero { padding: 64px 0 72px; }
     .btn-outline { margin: 12px 0 0; }
     .works { grid-template-columns: 1fr; }
+    .cases { grid-template-columns: 1fr; }
     section { padding: 64px 0; }
     .fixed-call {
       display: flex; justify-content: center; align-items: center; gap: 8px;
@@ -226,6 +279,10 @@
 </header>
 
 <main id="top">
+  <!-- お知らせ。data-until の日付を過ぎると自動で非表示になる -->
+  <div class="notice" data-until="2026-11-15">
+    <div class="wrap">🎉 <strong>11月15日（日）「光リフォーム大感謝祭」開催！</strong> 住宅設備メーカーが集まり、餅まきや抽選会もあります。<a href="tel:0972286586">お問い合わせ 0972-28-6586</a></div>
+  </div>
   <div class="hero">
     <div class="hero-slides" aria-hidden="true"></div>
     <div class="wrap">
@@ -303,6 +360,33 @@
   <section id="works">
     <div class="wrap">
       <div class="sec-title"><span>WORKS</span><h2>施工事例</h2></div>
+      <div class="cases">
+        <article class="case">
+          <p class="tag">キッチン｜2026年10月</p>
+          <h3>キッチンパネルの張り替え</h3>
+          <p>キッチンの色柄に合わせて、壁のパネルをアイカの「セラール セレント」に張り替えました。レンジフードやコンセントを一度外して施工し、コンセントも黒に変えて統一感を出しています。</p>
+          <a href="https://www.instagram.com/p/DeDamgqE3sD/" target="_blank" rel="noopener">写真を見る（Instagram）</a>
+        </article>
+        <article class="case">
+          <p class="tag">洗面｜2026年9月</p>
+          <h3>洗面化粧台の交換</h3>
+          <p>長年使った洗面化粧台を、白い洗面ボウルと木目の扉を組み合わせたものに交換しました。引き出しと開き戸の収納で、小物から大きな物まで片付けやすくなりました。</p>
+          <a href="https://www.instagram.com/p/DdosrkIk9iv/" target="_blank" rel="noopener">写真を見る（Instagram）</a>
+        </article>
+        <article class="case">
+          <p class="tag">トイレ｜2026年9月</p>
+          <h3>トイレのプチリフォーム</h3>
+          <p>約30年使ったトイレを、TOTOの「ピュアレストQR」に交換しました。ウォシュレットの不調と、剥がれかけていた壁紙もあわせて直し、内装も新しくしました。</p>
+          <a href="https://www.instagram.com/p/DdoeEckE__w/" target="_blank" rel="noopener">写真を見る（Instagram）</a>
+        </article>
+        <article class="case">
+          <p class="tag">トイレ・内装｜2026年9月</p>
+          <h3>トイレの漏水補修と内装工事</h3>
+          <p>湿気が気になっていたトイレで、長い間少しずつ水が漏れていたことが分かりました。傷んだ壁を修繕し、床の下地から直して内装を新しくしました。</p>
+          <a href="https://www.instagram.com/p/DdlpefTE7pQ/" target="_blank" rel="noopener">写真を見る（Instagram）</a>
+        </article>
+      </div>
+      <h3 class="sub-title">Instagramの最新投稿</h3>
       <!-- Instagramの投稿を埋め込み。差し替えるときは data-instgrm-permalink の URL を変える -->
       <div class="works">
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeDamgqE3sD/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DeDamgqE3sD/" target="_blank" rel="noopener">Instagramで見る</a></blockquote>
@@ -352,6 +436,29 @@
     </div>
   </section>
 
+  <section id="showroom" class="alt">
+    <div class="wrap">
+      <div class="sec-title"><span>SHOWROOM</span><h2>展示場・水廻りショールーム</h2></div>
+      <div class="showroom">
+        <div>
+          <p>佐伯市城南町の自社展示場に、キッチンやお風呂などの水廻り設備を展示しています。写真では伝わりにくい質感や広さ、使い勝手を、実物で確かめていただけます。</p>
+          <p>「こんな雰囲気にしたい」というご相談も大歓迎です。お気軽にお越しください。</p>
+          <p>📍 大分県佐伯市城南町29-23</p>
+        </div>
+        <div class="showroom-list">
+          <h3>主な展示</h3>
+          <ul>
+            <li>パナソニック システムバス「ビバス」</li>
+            <li>LIXIL シャワールーム</li>
+            <li>システムキッチン</li>
+            <li>アイカ「セラール」などのパネル見本</li>
+            <li>床材の見本</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
     <div class="wrap">
       <div class="sec-title"><span>CONTACT</span><h2>お問い合わせ</h2></div>
@@ -369,6 +476,12 @@
 
 <a class="fixed-call" href="tel:0972286586">📞 電話で相談する</a>
 
+<script>
+  // お知らせを data-until の日付の翌日から非表示にする
+  document.querySelectorAll('[data-until]').forEach(function (el) {
+    if (new Date() > new Date(el.dataset.until + 'T23:59:59+09:00')) el.remove();
+  });
+</script>
 <script>
   // images/hero1.jpg, hero2.jpg ... を順に探し、見つかった写真を背景スライドにする
   (function () {
